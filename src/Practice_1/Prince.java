@@ -5,6 +5,9 @@ public class Prince {
     private int age;
     private float foundedShoe;
 
+    public Prince() {
+    }
+
     public Prince(String name, int age, float foundedShoe) {
         this.name = name;
         this.age = age;

@@ -5,6 +5,9 @@ public class Cinderella {
     private int age;
     private float footSize;
 
+    public Cinderella() {
+            }
+
     public Cinderella(String name, int age, float footSize) {
         this.name = name;
         this.age = age;
