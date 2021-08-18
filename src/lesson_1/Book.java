@@ -6,6 +6,10 @@ public class Book{
     private String genre;
     private int year;
 
+    public Book() {
+
+    }
+
     public Book(String name, int pages, String genre, int year) {
         this.name = name;
         this.pages = pages;

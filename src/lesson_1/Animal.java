@@ -5,6 +5,9 @@ public  class Animal{
     private int age;
     private String type;
 
+    public Animal() {
+    }
+
     public Animal(String nickname, int age, String type) {
         this.nickname = nickname;
         this.age = age;
