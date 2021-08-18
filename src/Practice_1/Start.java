@@ -18,12 +18,13 @@ public class Start {
         cinderellas [8] = new Cinderella("Rachel", 20, 8.53f);
         cinderellas [9] = new Cinderella("Jennifer", 20, 7.75f);
 
-        for (Cinderella cinderella : cinderellas) {
-            if (cinderella.getFootSize() == 9.5f){
-                System.out.println(cinderella);
-            }
+//        for (Cinderella cinderella : cinderellas) {
+//            if (cinderella.getFootSize() == 9.5f){
+//                System.out.println(cinderella);
+//            }
+////        }
 
-
-        }
+        FindCinderella findCinderella = new FindCinderella();
+        FindCinderella.finder(cinderellas);
     }
 }
