@@ -37,7 +37,7 @@ public class Main {
         Car car10 = new Car(10,"acura", "Matthew","Smith",25,"big");
 
 
-        Engine engine = new Engine("Ferrari599xx",6.4, 560);
+        Engine engine = new Engine("Ferrari599xx",6.4f, 600);
         SuperCar superCar = new SuperCar("bugatti", "Bugatti", 2017, engine);
 
         superCar.increaseVolume(1.2f);

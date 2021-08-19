@@ -57,11 +57,11 @@ public class SuperCar {
     }
 
     public void increaseVolume(float num) {
-        this.engine.setVolume(this.engine.getVolume() + num);
+        this.engine.setVolume((this.engine.getVolume() + num));
     }
 
-    public float getCurrentVolume() {
-        return (float) this.engine.getVolume();
+    public double getCurrentVolume() {
+        return  this.engine.getVolume();
     }
 
     public void decreasePower(){

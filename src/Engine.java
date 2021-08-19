@@ -1,12 +1,12 @@
 public class Engine {
     private String model;
-    private double volume;
+    private float volume;
     private int power;
 
     public Engine() {
     }
 
-    public Engine(String model, double volume, int power) {
+    public Engine(String model, float volume, int power) {
         this.model = model;
         this.volume = volume;
         this.power = power;
@@ -16,7 +16,7 @@ public class Engine {
         this.model = model;
     }
 
-    public void setVolume(double volume) {
+    public void setVolume(float volume) {
         this.volume = volume;
     }
 
@@ -28,7 +28,7 @@ public class Engine {
         return model;
     }
 
-    public double getVolume() {
+    public float getVolume() {
         return volume;
     }
 
