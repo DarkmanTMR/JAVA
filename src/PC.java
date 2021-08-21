@@ -71,6 +71,10 @@ public class PC {
         return this.getCpu().getFrequency();
     }
 
+    public void setCPUModel(String model){
+        this.cpu.setModel(model);
+    }
+
     public void increaseCPUFrequency(int number) {
         this.cpu.setFrequency(getCpu().getFrequency() + number);
     }
@@ -85,12 +89,31 @@ public class PC {
         this.cpu.setGeneration(getCpu().getGeneration() - gen);
     }
 
+    public void changeCPUProducer(String prod){
+        this.cpu.setProducer(prod);
+    }
+
+    public void changeHardProducer(String hardProd){
+        this.hard.setProducer(hardProd);
+    }
     public void increaseHardDriveVolume(int gb){
         this.hard.setVolume(getHard().getVolume() + gb);
     }
     public void decreaseHardDriveVolume(int gb){
         this.hard.setVolume(getHard().getVolume() - gb);
     }
+
+    public void changeDriveType(Type type){
+        this.hard.setType(type);
+    }
+
+    public void changeRamProducer(String ramProd) {
+        this.ram.setProducer(ramProd);
+    }
+
+    public void changeRamModel(String ramMod){
+        this.ram.setModel(ramMod);
+        }
 
     public void increaseRamVolume(int mb){
         this.ram.setVolume(getRam().getVolume() + mb);
@@ -107,4 +130,15 @@ public class PC {
     public void decreaseRamFrequency(int mhz){
         this.ram.setFrequency(getRam().getFrequency() - mhz);
     }
+
+    public void changeMotherboardModel(String mbModel){
+        this.motherboard.setModel(mbModel);
+    }
+
+    public void changeMotherboardProducer(String mbProd){
+        this.motherboard.setProducer(mbProd);
+    }
+
+
+
 }

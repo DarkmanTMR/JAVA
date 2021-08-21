@@ -14,7 +14,8 @@ public class Main {
         System.out.println("Default CPU Generation: " + pc.getCpu().getGeneration());
 
         System.out.println("----------------------------------------------------------");
-
+        pc.setCPUModel("Ryzen7");
+        System.out.println("new CPU model: " + pc.getCpu().getModel());
         pc.increaseCPUFrequency(200);
         System.out.println("increased CPU Frequency: " + pc.getCPUSFrequency());
         System.out.println("----------------------------------------------------------");
@@ -27,9 +28,13 @@ public class Main {
         pc.decreaseCPUGeneration(1);
         System.out.println("decreased CPU Generation: " + pc.getCpu().getGeneration());
         System.out.println("----------------------------------------------------------");
+        pc.changeCPUProducer("AMD");
+        System.out.println("new CPU producer" + pc.getCpu().getProducer());
+        System.out.println("----------------------------------------------------------");
 
         pc.increaseHardDriveVolume(2000);
         System.out.println("increased HardDrive Volume: " + pc.getHard().getVolume());
+
 
     }
 }
