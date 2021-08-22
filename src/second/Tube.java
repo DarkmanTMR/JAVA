@@ -20,9 +20,11 @@ public class Tube implements Instrument{
 
     @Override
     public String toString() {
-        return "diameter=" + diameter +
+        return "Tube{" +
+                "diameter=" + diameter +
                 '}';
     }
+
     public void play(){
         System.out.println("now playing tube with diameter of " + getDiameter() + " centimeters");
     }
