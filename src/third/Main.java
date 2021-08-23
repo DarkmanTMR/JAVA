@@ -5,10 +5,10 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-        TShirt tShirt = new TShirt(Size.L,10,"green");
-        Pants pants = new Pants(Size.M,15,"blue");
-        Dress dress = new Dress(Size.L,5,"yellow");
-        Tie tie = new Tie(Size.XS,20,"brown" );
+        TShirt tShirt = new TShirt(Size.L,"green");
+        Pants pants = new Pants(Size.M,"blue");
+        Dress dress = new Dress(Size.L,"yellow");
+        Tie tie = new Tie(Size.XS,"brown" );
 
 
         Clothes [] clothes = {tShirt,pants,dress,tie};
