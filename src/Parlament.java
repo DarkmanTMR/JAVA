@@ -41,12 +41,19 @@ public class Parlament {
     public void addFraction(int number, Fraction fraction1) {
         fraction.put(number, fraction1);
     }
-}
+    public void removeFraction(int number, Fraction fraction1) {
+        fraction.remove(number, fraction1);
+    }
+    public void showAllFractions(Parlament parlament){
+
+        }
+
+    }
+
 
 //todo
 //    методи
-//    додати/видалити фракцію
-//    вивести всі фракції
+//   вивести всі фракції
 //    вивести конкретну фракцію
 //    додати/видалити депутата з фракції
 //    вивести всіх хабарників фракції
