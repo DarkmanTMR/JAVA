@@ -70,6 +70,32 @@ private Customer customer;
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Order order = (Order) o;
+
+        if (id != order.id) return false;
+        if (!status.equals(order.status)) return false;
+        if (!orderDate.equals(order.orderDate)) return false;
+        if (!deliveryDate.equals(order.deliveryDate)) return false;
+        if (!products.equals(order.products)) return false;
+        return customer.equals(order.customer);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = (int) (id ^ (id >>> 32));
+        result = 31 * result + status.hashCode();
+        result = 31 * result + orderDate.hashCode();
+        result = 31 * result + deliveryDate.hashCode();
+        result = 31 * result + products.hashCode();
+        result = 31 * result + customer.hashCode();
+        return result;
+    }
+
+    @Override
     public String toString() {
         return "Order{" +
                 "id=" + id +
