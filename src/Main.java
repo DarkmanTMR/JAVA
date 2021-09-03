@@ -37,7 +37,7 @@ public class Main {
 ////        System.out.println(fraction);
 
 //Map<Integer, Object> mapick = new HashMap<>();
-//mapick.put(1,deputy);
+//mapick.put(1,fraction);
 //mapick.put(2,deputy1);
 //mapick.put(3,deputy2);
 //mapick.put(4,deputy3);
@@ -47,9 +47,11 @@ public class Main {
 
 //System.out.println(parlament);
 
-
-
-
+Parlament parlament = new Parlament();
+parlament.addFraction(1,fraction);
+System.out.println(parlament);
+parlament.addFraction(2,fraction);
+        System.out.println(parlament);
 
 
 

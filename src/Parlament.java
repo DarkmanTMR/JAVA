@@ -3,16 +3,16 @@ import java.util.Map;
 
 
 public class Parlament {
-    private Map<String, Fraction> fraction = new HashMap<>();
+    private Map<Integer, Fraction> fraction = new HashMap<>();
 
     public Parlament() {
     }
 
-    public Map<String, Fraction> getFraction() {
-        return fraction;
+    public HashMap<Integer, Fraction> getFraction() {
+        return (HashMap<Integer, Fraction>) fraction;
     }
 
-    public void setFraction(Map<String, Fraction> fraction) {
+    public void setFraction(HashMap<Integer, Fraction> fraction) {
         this.fraction = fraction;
     }
 
@@ -38,13 +38,12 @@ public class Parlament {
         return fraction.hashCode();
     }
 
-    public void addFraction(){
-
+    public void addFraction(int number, Fraction fraction1) {
+        fraction.put(number, fraction1);
     }
+}
 
-//todo клас Верховна рада
-//            поля
-//    мапа фракцій
+//todo
 //    методи
 //    додати/видалити фракцію
 //    вивести всі фракції
@@ -58,4 +57,4 @@ public class Parlament {
 //
 
 
-}
+
