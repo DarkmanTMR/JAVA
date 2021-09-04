@@ -3,8 +3,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
-public class Fraction {
-    private ArrayList<Deputy> deputies = new ArrayList<>();
+public class Fraction implements Comparable{
+    private List<Deputy> deputies = new ArrayList<>();
 
 
     public Fraction() {
@@ -15,11 +15,11 @@ public class Fraction {
     }
 
     public ArrayList<Deputy> getDeputies() {
-        return deputies;
+        return (ArrayList<Deputy>) deputies;
     }
 
     public ArrayList<Deputy> getArrayList() {
-        return deputies;
+        return (ArrayList<Deputy>) deputies;
     }
 
     public void setArrayList(ArrayList<Deputy> arrayList) {
@@ -66,9 +66,11 @@ public class Fraction {
         }
     }
 
-//    public void theMostGreedyDeputy(Deputy deputy){
-//         deputy.;
-//    }
+    public void theMostGreedyDeputy(){
+            deputies.sort((o1, o2) -> o1.getBribeSize() - o2.getBribeSize());
+            Deputy a = deputies.get(deputies.size() - 1);
+        System.out.println(a);
+    }
 
 
     public void getAllDeputy(){
@@ -80,12 +82,17 @@ public class Fraction {
         deputies.clear();
     }
 
+    @Override
+    public int compareTo(Object o) {
+        return 0;
+    }
+
 //    public void averegeBribeSum(){
 //        double sum = 0;
 //
 //        System.out.println();
 //    }
 
-
+// TODO: 04.09.2021  вивести загальну суму хабарів для фракції
 
 }
