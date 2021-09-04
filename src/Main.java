@@ -1,10 +1,6 @@
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
-import java.util.function.Predicate;
-import java.util.stream.Stream;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -32,6 +28,7 @@ public class Main {
         orders.add(new Order(5,"ready", LocalDate.of(2021,3,14),LocalDate.of(2021,7,11),products, BobCustomer));
         orders.add(new Order(6,"ready", LocalDate.of(2021,3,14),LocalDate.of(2021,7,11),products, BobCustomer));
         orders.add(new Order(7,"ready", LocalDate.of(2021,3,14),LocalDate.of(2021,7,11),products, BobCustomer));
+
 
 
 
@@ -64,24 +61,30 @@ public class Main {
 //              .forEach(order -> System.out.println(order));
 
 //5.Calculate order average payment placed on 14-Mar-2021
-//       Order payment = orders.stream()
+//       double payment = orders.stream()
 //                .filter(order -> order.getOrderDate().equals(LocalDate.of(2021,3,14)))
-////                .mapToDouble(order -> order)
-
-//        System.out.println();
-
-
-
+//               .flatMap(order -> order.getProducts().stream())
+//               .mapToDouble(Product::getPrice)
+//               .average().getAsDouble();
+//        System.out.println(payment);
 
 
+// 6. Get the most expensive product by category
+
+        Map<Object, Optional<Product>> prod = products.stream()
+                .collect(Collectors.groupingBy(Product -> Product.getCategory(),
+                        Collectors.maxBy(Comparator.comparing(Product -> Product.getPrice()))));
+        System.out.println(prod);
 
 
-//       System.out.println();
 
 
-// TODO:
-//  5. Calculate order average payment placed on 14-Mar-2021 (використайте в процесі mapToDouble)
-//  6. Get the most expensive product by category (використайте groupingBy)
+
+
+
+
+
+
 
 
 

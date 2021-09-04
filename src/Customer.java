@@ -37,26 +37,6 @@ public class Customer {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Customer customer = (Customer) o;
-
-        if (id != customer.id) return false;
-        if (tier != customer.tier) return false;
-        return name.equals(customer.name);
-    }
-
-    @Override
-    public int hashCode() {
-        int result = (int) (id ^ (id >>> 32));
-        result = 31 * result + name.hashCode();
-        result = 31 * result + tier;
-        return result;
-    }
-
-    @Override
     public String toString() {
         return "Customer{" +
                 "id=" + id +
