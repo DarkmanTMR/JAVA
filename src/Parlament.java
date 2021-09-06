@@ -16,6 +16,10 @@ public class Parlament {
         this.fraction = fraction;
     }
 
+    public void setFraction(Map<Integer, Fraction> fraction) {
+        this.fraction = fraction;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -44,8 +48,8 @@ public class Parlament {
     public void removeFraction(int number, Fraction fraction1) {
         fraction.remove(number, fraction1);
     }
-    public void showAllFractions(Parlament parlament){
-
+    public void showAllFractions(){
+            getFraction();
         }
 
     }

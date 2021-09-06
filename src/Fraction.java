@@ -87,9 +87,14 @@ public class Fraction implements Comparable{
         return 0;
     }
 
-//    public void averegeBribeSum(){
-//        double sum = 0;
-//
+//    public void averegeBribe(Deputy deputy){
+//       if (deputy.isGreedy()){
+//           getDeputies().
+//       }
+
+
+
+
 //        System.out.println();
 //    }
 
