@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
@@ -55,22 +56,26 @@ public class Main {
                 wordList.add("Zero");
                 wordList.add("Bee");
 
-                System.out.println(wordList);
-
-//                wordList.stream()
-//                        .sorted(Comparator.comparing(word -> ))
 
 
+               List<String> sortedList =  wordList.stream()
+                        .sorted((o1, o2) -> o1.compareTo(o2))
+                        .collect(Collectors.toList());
+                        System.out.println(sortedList);
 
+
+        List<String> reversedList =  wordList.stream()
+                .sorted((o1, o2) -> o2.compareTo(o1))
+                .collect(Collectors.toList());
+        System.out.println(reversedList);
+
+        List<String> lengthList = wordList.stream()
+                .filter(word -> word.length() < 4)
+                .collect(Collectors.toList());
+        System.out.println(lengthList);
 
 
 
 
     }
 }
-// TODO: 08.09.2021
-//  - создать ArrayList со словами на 15-20 элементов.
-//  -- отсортировать его по алфавиту в восходящем порядке.
-//  -- отсортировать его по алфавиту  в нисходящем порядке.
-//  -- отфильтровать слова длиной менее 4х символов
-//  Все тоже стримами делаем
