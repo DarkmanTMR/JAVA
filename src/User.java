@@ -1,13 +1,15 @@
 public class User {
     private long id;
+    private String name;
     private int age;
     private Gender gender;
 
     public User() {
     }
 
-    public User(long id, int age, Gender gender) {
+    public User(long id, String name, int age, Gender gender) {
         this.id = id;
+        this.name = name;
         this.age = age;
         this.gender = gender;
     }
@@ -18,6 +20,14 @@ public class User {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getAge() {
@@ -40,6 +50,7 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
+                ", name='" + name + '\'' +
                 ", age=" + age +
                 ", gender=" + gender +
                 '}';

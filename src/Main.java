@@ -1,20 +1,22 @@
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
-      User user = new User(1,20,Gender.MALE);
-      User user1 = new User(2,21,Gender.FEMALE);
-      User user2 = new User(3,25,Gender.FEMALE);
-      User user3 = new User(4,23,Gender.MALE);
-      User user4 = new User(5,26,Gender.FEMALE);
-      User user5 = new User(6,27,Gender.MALE);
-      User user6 = new User(7,29,Gender.FEMALE);
-      User user7 = new User(8,30,Gender.MALE);
-      User user8 = new User(9,31,Gender.FEMALE);
-      User user9 = new User(10,19,Gender.MALE);
+      User user = new User(1,"Bob",20,Gender.MALE);
+      User user1 = new User(2,"Roberta",21,Gender.FEMALE);
+      User user2 = new User(3,"Diana",25,Gender.FEMALE);
+      User user3 = new User(4,"Alberto",23,Gender.MALE);
+      User user4 = new User(5,"Alexandra",26,Gender.FEMALE);
+      User user5 = new User(6,"Socratt",27,Gender.MALE);
+      User user6 = new User(7,"Lisa",29,Gender.FEMALE);
+      User user7 = new User(8,"Teodor",30,Gender.MALE);
+      User user8 = new User(9,"Pocahontas",31,Gender.FEMALE);
+      User user9 = new User(10,"Ion",19,Gender.MALE);
 
-      ArrayList<User> userList = new ArrayList<>(10);
+     List<User> userList = new ArrayList<>(10);
         userList.add(user);
         userList.add(user1);
         userList.add(user2);
@@ -26,7 +28,37 @@ public class Main {
         userList.add(user8);
         userList.add(user9);
 
-       userList.stream().filter(user10 -> user10.getId() % 2 != 0);
+//      userList.stream().filter(users -> users.getId() % 2 == 0)
+//              .forEach(users -> System.out.println(users));
+
+//      userList.stream().filter(users -> users.getName().length() > 5)
+//              .forEach(users -> System.out.println(users));
+
+//      userList.stream().filter(users -> users.getGender().equals(Gender.FEMALE))
+//              .forEach(users -> System.out.println(users));
+
+
+        ArrayList<String> wordList = new ArrayList<String>();
+                wordList.add("One");
+                wordList.add("Two");
+                wordList.add("Three");
+                wordList.add("Four");
+                wordList.add("Five");
+                wordList.add("Six");
+                wordList.add("Seven");
+                wordList.add("Eight");
+                wordList.add("Nine");
+                wordList.add("Ten");
+                wordList.add("Jupiter");
+                wordList.add("Mars");
+                wordList.add("Alabama");
+                wordList.add("Zero");
+                wordList.add("Bee");
+
+                System.out.println(wordList);
+
+//                wordList.stream()
+//                        .sorted(Comparator.comparing(word -> ))
 
 
 
@@ -37,13 +69,6 @@ public class Main {
     }
 }
 // TODO: 08.09.2021
-//  Створити енум Стать.
-//  Створити клас Юзер з плоями : ід, ім'я , вік, Стать.
-//  Ствроити 10 об'єктів Юзера з відповідними ід (1-10)
-//  Свторити  arrayList , та покласти цих юзерів в arayList.
-//  - Проітерувати колекцію юзерів, вивевши тільки юзерів з парним значенням ід
-//  - Проітерувати колекцію юзерів, вивевши тільки юзерів з ім'ям , довжина якого більше ніж 5 символів
-//  - Проітерувати колекцію юзерів, вивевши тільки юзерів жінок
 //  - создать ArrayList со словами на 15-20 элементов.
 //  -- отсортировать его по алфавиту в восходящем порядке.
 //  -- отсортировать его по алфавиту  в нисходящем порядке.
